@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.language.entity.LanguageMapper">
+
+    <!-- language_id를 사용하여 언어를 가져오는 쿼리 -->
+    <select id="getLanguageById" parameterType="int" resultType="com.language.entity.Language">
+        SELECT * FROM language WHERE language_id = #{id}
+    </select>
+
+    <!-- 모든 언어를 가져오는 쿼리 -->
+    <select id="getAllLanguages" resultType="com.language.entity.Language">
+        SELECT * FROM language
+    </select>
+
+    <!-- 언어를 삽입하는 쿼리 -->
+    <insert id="insertLanguage" parameterType="com.language.entity.Language">
+        INSERT INTO language (name) VALUES (#{name})
+    </insert>
+
+    <!-- 언어를 업데이트하는 쿼리 -->
+    <update id="updateLanguage" parameterType="com.language.entity.Language">
+        UPDATE language SET name = #{name} WHERE language_id = #{languageId}
+    </update>
+
+    <!-- 언어를 삭제하는 쿼리 -->
+    <delete id="deleteLanguage" parameterType="int">
+        DELETE FROM language WHERE language_id = #{id}
+    </delete>
+</mapper>
