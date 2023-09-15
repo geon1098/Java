@@ -7,6 +7,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import lombok.Builder;
+
 @Entity
 public class Language {
 
@@ -41,12 +43,10 @@ public class Language {
 	public void setLast_update(LocalDateTime last_update) {
 		this.last_update = last_update;
 	}
-
+	@Builder
 	public Language(int language_id, String name, LocalDateTime last_update) {
 		this.language_id = language_id;
 		this.name = name;
 		this.last_update = last_update;
 	}
-
-	
 }
