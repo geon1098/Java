@@ -33,10 +33,12 @@ public class LanguageController {
     public void updateLanguage(@PathVariable int id, @RequestBody Language language) {
         language.setLanguage_id(id);
         languageService.updateLanguage(language);
+        System.out.println("갱신");
     }
 
     @DeleteMapping("/{id}")
     public void deleteLanguage(@PathVariable int id) {
         languageService.deleteLanguage(id);
+        System.out.println("삭제");
     }
 }

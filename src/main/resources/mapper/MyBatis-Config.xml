@@ -16,7 +16,7 @@
                 <!-- MySQL JDBC 드라이버 클래스 -->
                 <property name="driver" value="com.mysql.cj.jdbc.Driver" />
                 <!-- MySQL 데이터베이스 연결 URL -->
-                <property name="url" value="jdbc:mysql://localhost:3306/your_database_name?useSSL=false&amp;serverTimezone=UTC" />
+                <property name="url" value="jdbc:mysql://localhost:3306/sakila?useSSL=false&amp;serverTimezone=UTC" />
                 <property name="username" value="root" />
                 <property name="password" value="1234" />
             </dataSource>
