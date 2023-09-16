@@ -1,5 +1,6 @@
 package com.language.entity;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,9 @@ public class LanguageService {
     }
 
     public void insertLanguage(Language language) {
+        languageMapper.insertLanguage(language);
+        LocalDateTime currentDateTime = LocalDateTime.now(); // 현재 날짜와 시간
+        language.setLastUpdate(currentDateTime);
         languageMapper.insertLanguage(language);
     }
 

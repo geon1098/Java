@@ -8,8 +8,12 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
+@Data
+@NoArgsConstructor
 public class Language {
 
 	@Id
@@ -20,11 +24,12 @@ public class Language {
 	
 	private LocalDateTime last_update;
 	
-	public int getLanguage_id() {
+	
+	public int getLanguageId() {
 		return language_id;
 	}
 
-	public void setLanguage_id(int language_id) {
+	public void setLanguageId(int language_id) {
 		this.language_id = language_id;
 	}
 
@@ -36,11 +41,11 @@ public class Language {
 		this.name = name;
 	}
 
-	public LocalDateTime getLast_update() {
+	public LocalDateTime getLastUpdate() {
 		return last_update;
 	}
 
-	public void setLast_update(LocalDateTime last_update) {
+	public void setLastUpdate(LocalDateTime last_update) {
 		this.last_update = last_update;
 	}
 	@Builder
