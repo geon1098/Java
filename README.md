@@ -1,7 +1,7 @@
-# 프로젝트 설명 브랜치 다른곳으로 들어가면 됩니다!
+# 브랜치 설명
 
 # CRUD
 (SpringBoot + JPA + MySQL) Restful 구성하여 CRUD 테스트
 
-#CRUD2/MyBatis
+# CRUD2/MyBatis
 (SpringBoot + MyBatis + MySQL) Restful 구성하여 CRUD 테스트
